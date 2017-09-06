@@ -1,0 +1,183 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>拡張を使ってみよう &#8212; handson 1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="用語集を作る" href="use_glossary.html" />
+    <link rel="prev" title="索引(インデックス)" href="write_rest10.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="use_glossary.html" title="用語集を作る"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="write_rest10.html" title="索引(インデックス)"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">拡張を使ってみよう</a><ul>
+<li><a class="reference internal" href="#sphinx">Sphinx拡張</a></li>
+<li><a class="reference internal" href="#id3">拡張機能を有効にする</a></li>
+<li><a class="reference internal" href="#id4">追加されるディレクティブとオプション</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="write_rest10.html"
+                        title="前の章へ">索引(インデックス)</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="use_glossary.html"
+                        title="次の章へ">用語集を作る</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/use_extentions.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="検索" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>拡張を使ってみよう<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="sphinx">
+<h2>Sphinx拡張<a class="headerlink" href="#sphinx" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sphinx拡張は、あらかじめSphinxに機能として実装されている「組み込み拡張機能」とインストールして機能を追加するサードパーティ製の拡張機能があります。
+さまざまな拡張機能がありますが、主な拡張はディレクティブを追加し、Sphinxで表現できる記法を増やします。
+他の外部コマンドの実行結果を取り込むような拡張もあります。</p>
+<p>サードパーティ製の拡張機能の情報は以下にまとまっています。</p>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-doc.org/extensions.html">http://sphinx-doc.org/extensions.html</a></li>
+<li><a class="reference external" href="http://docs.sphinx-users.jp/extensions.html">http://docs.sphinx-users.jp/extensions.html</a></li>
+</ul>
+<p>今回は組み込み拡張のひとつ、「todo拡張」について紹介します。
+どの拡張機能も有効にする方法は同じですので、公式ドキュメントを参考に他の拡張機能も使用してみて下さい。</p>
+<p>todo以外の拡張機能については公式ドキュメント <a class="footnote-reference" href="#extensions" id="id2">[1]</a> を参照してください。</p>
+<p class="rubric">脚注</p>
+<table class="docutils footnote" frame="void" id="extensions" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><ul class="first last simple">
+<li><a class="reference external" href="http://sphinx-doc.org/extensions.html#builtin-sphinx-extensions">http://sphinx-doc.org/extensions.html#builtin-sphinx-extensions</a></li>
+<li><a class="reference external" href="http://docs.sphinx-users.jp/extensions.html#builtin-sphinx-extensions">http://docs.sphinx-users.jp/extensions.html#builtin-sphinx-extensions</a></li>
+</ul>
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>拡張機能を有効にする<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>拡張機能を使用するにはプロジェクトディレクトリのルートにあるconf.pyに設定を追加します。
+todo拡張を有効にするには以下の様に設定します。</p>
+<p>変更前:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>変更後:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>複数の拡張機能を使用する場合はカンマ( <code class="kbd docutils literal"><span class="pre">,</span></code> )で区切って並べます。
+1行で記述しでも問題ありませんが、下記の例では可読性を高めるために改行を入れています。</p>
+<p>複数の拡張機能を使用する例:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;sphinx.ext.todo&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;他の拡張機能&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>追加されるディレクティブとオプション<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>todo拡張を有効にすると「todo」と「todolist」というディレクティブが追加されます。</p>
+<p>todoディレクティブは、ToDoとしてメモしておきたい内容をreSTに埋め込みます。
+ディレクティブの要素にToDoの内容を記述します。
+なお、ToDoが1行の場合はディレクティブの引数に内容を記述できます。</p>
+<p>todolistディレクティブは、プロジェクト全体のtodoの内容を列挙します。
+どのreSTファイルの何行目にあるtodoなのかも合わせて表示します。</p>
+<p>しかし、これらのToDoはこのままではHTMLには表示されません。
+todo拡張を有効にすると、「todo_include_todos」というオプションが追加されます。
+conf.pyに「todo_include_todos = True」と追加で設定すると、todo、todolistが表示されるようになります。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="use_glossary.html" title="用語集を作る"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="write_rest10.html" title="索引(インデックス)"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, sphinx-users.jp.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3 で生成しました。
+    </div>
+  </body>
+</html>

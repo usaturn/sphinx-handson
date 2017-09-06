@@ -1,0 +1,131 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用語集を作る &#8212; handson 1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="Markdown を使うには？" href="use_markdown.html" />
+    <link rel="prev" title="拡張を使ってみよう" href="use_extentions.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="use_markdown.html" title="Markdown を使うには？"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="use_extentions.html" title="拡張を使ってみよう"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="use_extentions.html"
+                        title="前の章へ">拡張を使ってみよう</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="use_markdown.html"
+                        title="次の章へ">Markdown を使うには？</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/use_glossary.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="検索" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>用語集を作る<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sphinxには用語集を作成するための「glossary」というディレクティブがあります。
+記述したキーワード(用語)は「term」というロール(後述)で参照することができます。
+また、キーワードとして定義した単語は、索引のページからも参照できます。</p>
+<p>Sphinx1.3のデフォルトテーマのAlabasterでは、横幅が860px以上あると索引へのリンクは消えてしまいます。
+ブラウザの横幅をサイドバーが消えるまで縮める(横幅860px未満)か、ページ内に「 <code class="docutils literal"><span class="pre">:ref:`genindex`</span></code> 」としてリンクを作成してください。
+テーマによっては、ページの右上、または右下に索引のリンクが常に存在するものもあります。
+テーマの変更については次回紹介します。</p>
+<p>glossaryはディレクティブの要素にキーワードを指定し、さらにインデントを付け、キーワードの説明を記述しています。
+これは「定義リスト」と呼ばれるreSTの記法のひとつです。
+定義リストの詳しい内容についてはDocutilsのドキュメント <a href="#id4"><span class="problematic" id="id2">[#definition-lists]_</span></a> を参照してください。</p>
+<p>glossaryは1箇所にまとめて記述する必要はなく、複数のページで使用しても問題はありません。</p>
+<p>glossaryは以下の様に使用します。
+sortedオプションは変換時にキーワードをアルファベット順に並べ替えます。</p>
+<p>glossaryを参照する例:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>:term:`Sphinx` と :term:`Word` について、それぞれのメリット・デメリットをまとめます。
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="use_markdown.html" title="Markdown を使うには？"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="use_extentions.html" title="拡張を使ってみよう"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, sphinx-users.jp.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3 で生成しました。
+    </div>
+  </body>
+</html>

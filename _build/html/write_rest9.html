@@ -1,0 +1,166 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ファイルのダウンロードリンクや画像へのリンク &#8212; handson 1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="索引(インデックス)" href="write_rest10.html" />
+    <link rel="prev" title="プロジェクト内へのリンク" href="write_rest8.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="write_rest10.html" title="索引(インデックス)"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="write_rest8.html" title="プロジェクト内へのリンク"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ファイルのダウンロードリンクや画像へのリンク</a><ul>
+<li><a class="reference internal" href="#id2">ファイルをダウンロードさせるリンク</a></li>
+<li><a class="reference internal" href="#figure">画像を表示する ～figure ディレクティブ～</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="write_rest8.html"
+                        title="前の章へ">プロジェクト内へのリンク</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="write_rest10.html"
+                        title="次の章へ">索引(インデックス)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/write_rest9.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="検索" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>ファイルのダウンロードリンクや画像へのリンク<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>ファイルをダウンロードさせるリンク<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul>
+<li><p class="first"><span class="xref std std-term">プロジェクト</span> 内に存在するファイルへのダウンロード用リンクを張る事ができます。</p>
+<p>記述例:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span></span><span class="na">:download:</span><span class="nv">`ダウンロードできます &lt;./files/build_and_browsing.zip&gt;`</span>
+</pre></div>
+</div>
+<p>このように表示されます。</p>
+<p><a class="reference download internal" href="_downloads/build_and_browsing.zip" download=""><code class="xref download docutils literal"><span class="pre">ダウンロードできます</span></code></a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="figure">
+<h2>画像を表示する ～figure ディレクティブ～<a class="headerlink" href="#figure" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul>
+<li><p class="first">画像を表示させたい場合は <code class="docutils literal"><span class="pre">..</span> <span class="pre">figure::</span></code> というディレクティブを使います。</p>
+<p>まずはPythonの <a class="reference external" href="http://pypi.python.org/pypi/Pillow/">pillowパッケージ</a> をインストールしましょう。</p>
+<div class="highlight-rest"><div class="highlight"><pre><span></span>pip install pillow
+</pre></div>
+</div>
+<p><a class="reference external" href="http://pypi.python.org/pypi/Pillow/">pillowパッケージ</a> がインストール出来たら figureディレクティブのオプションが使えるようになります。</p>
+<p>記述例:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> ./img/background.png
+   <span class="nc">:scale:</span> <span class="nf">50</span>
+   <span class="nc">:align:</span> <span class="nf">left</span>
+   <span class="nc">:target:</span> <span class="nf">http://sphinx-users.jp/</span>
+
+   一行あけてここに書いたものがキャプションになります
+</pre></div>
+</div>
+<p>htmlこのように表示されます。</p>
+<div class="figure align-left" id="id4">
+<a class="reference external image-reference" href="http://sphinx-users.jp/"><img alt="_images/background.png" src="_images/background.png" style="width: 410.0px; height: 260.5px;" /></a>
+<p class="caption"><span class="caption-text">一行あけてここに書いたものがキャプションになります</span></p>
+</div>
+<ul class="simple">
+<li><strong>scale</strong> は縮小、拡大をする時のオプションです。100が1/1スケールです。</li>
+<li><strong>target</strong> リンク先を指定する事ができます。</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="write_rest10.html" title="索引(インデックス)"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="write_rest8.html" title="プロジェクト内へのリンク"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, sphinx-users.jp.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3 で生成しました。
+    </div>
+  </body>
+</html>

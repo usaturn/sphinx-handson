@@ -1,0 +1,217 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>reStructuredText を覚えよう！ &#8212; handson 1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="インラインマークアップ、リスト、セクション" href="write_rest2.html" />
+    <link rel="prev" title="reST を記述する上での注意点" href="writing_tool.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="write_rest2.html" title="インラインマークアップ、リスト、セクション"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="writing_tool.html" title="reST を記述する上での注意点"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">reStructuredText を覚えよう！</a><ul>
+<li><a class="reference internal" href="#id1">reStructuredText を覚えよう！</a></li>
+<li><a class="reference internal" href="#rest-rst">reSTファイル(拡張子 .rst)の編集例</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="writing_tool.html"
+                        title="前の章へ">reST を記述する上での注意点</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="write_rest2.html"
+                        title="次の章へ">インラインマークアップ、リスト、セクション</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/write_rest1.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="検索" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="restructuredtext">
+<h1>reStructuredText を覚えよう！<a class="headerlink" href="#restructuredtext" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>reStructuredText を覚えよう！<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li>Sphinxドキュメントは <strong>reStructuredText</strong> という記法を使用して、テキストファイル(拡張子.rst)を作成します。</li>
+</ul>
+</div>
+<div class="section" id="rest-rst">
+<h2>reSTファイル(拡張子 .rst)の編集例<a class="headerlink" href="#rest-rst" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず、実際にコピペでSphinxドキュメントを作成してみましょう。</p>
+<ol class="arabic">
+<li><p class="first"><em>index.rst</em> をテキストエディタで開きます。</p>
+</li>
+<li><p class="first">記載してある内容を全て削除してください。 <em>index.rst</em> は <code class="docutils literal"><span class="pre">sphinx-quickstart</span></code> を打てば何度でも作成できますのでバックアップは不要です。</p>
+</li>
+<li><p class="first">文字コードを <em>UTF-8</em> に変更して下さい。</p>
+</li>
+<li><p class="first">次の内容をコピー＆ペーストし、上書き保存してください。</p>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="gh">===============================</span>
+<span class="gh">Sphinx本 著者ミーティング 6/30</span>
+<span class="gh">===============================</span>
+
+<span class="gh">開催情報</span>
+<span class="gh">========</span>
+<span class="m">*</span> 日時: 2013/06/30 10:00 - 12:00
+<span class="m">*</span> 場所: 曙橋
+<span class="m">*</span> 参加者: shimizukawa、tk0miya、usaturn、r_rudi
+
+
+<span class="gh">この本を執筆する目的</span>
+<span class="gh">====================</span>
+
+Sphinxユーザ会のサイトで、多くの情報を提供しています。
+しかし、書籍という形でSphinxの基礎をまとめることには
+意味がある、と私たちは考えました。
+
+この本の目的を、本書の前書き案から引用します。
+
+   この本は、Sphinxをはじめる際によくある疑問やつまづきを解消し、
+   基本的な書き方、使い方を理解できるように執筆しました。
+
+   Sphinxが今までよりもはじめやすく、また、人に勧めやすくなること、
+   そして、Sphinxの公式ドキュメントを読みこなすために十分な基礎知識を
+   伝えることがこの本のゴールです。
+
+
+<span class="gh">進捗状況について</span>
+<span class="gh">================</span>
+まず進捗状況の共有を行いました。前回5月13日のミーティングからの進捗確認です。
+
+<span class="m">*</span> 前書き: <span class="gs">**未着手**</span>
+<span class="m">*</span> 1章: 大まかに完了。
+
+ <span class="m">*</span> <span class="ge">*肉付けと見直しが必要*</span>
+ <span class="m">*</span> docutilsの詳細は <span class="s">``..\appendix``</span> に移動？
+
+<span class="m">*</span> 2章: <span class="gs">**完了**</span>
+
+
+<span class="gh">検討課題</span>
+<span class="gh">--------</span>
+<span class="m">1.</span> 1章で、Sphinxの全体像を表すイメージ図が必要
+
+<span class="m">2.</span> Sphinx-users.jp_ の紹介とリンクを追加しよう
+
+<span class="m">3.</span> <span class="s">`進捗状況について`_</span> で確認したような進捗を自動的に確認する方法
+
+議事録に補足があれば <span class="s">`bitbucket </span><span class="si">&lt;https://bitbucket.org/&gt;</span><span class="s">`_</span> の
+https://bitbucket.org/sphinxjp/sphinx-book1/issues でコメントを付けて
+ください。
+
+<span class="p">..</span> <span class="nt">_Sphinx-users.jp:</span> http://sphinx-users.jp/
+
+
+<span class="gh">次回予定</span>
+<span class="gh">========</span>
+
+<span class="cp">.. 日程と場所の調整が必要。以下、仮予定</span>
+
+<span class="cp">   * 日時: 2013/07/07 16:00 - 18:00</span>
+<span class="cp">   * 場所: 曙橋</span>
+
+調整中
+</pre></div>
+</div>
+</li>
+<li><p class="first">張り付けたらターミナルより <em>index.rst</em> があるディレクトリに移動し <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code> を実行して下さい。</p>
+</li>
+<li><p class="first">下記ディレクトリの html をブラウザで閲覧して下さい。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">index</span><span class="o">.</span><span class="n">rst</span> <span class="n">があるディレクトリの</span> \<span class="n">_build</span>\<span class="n">html</span>\<span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="write_rest2.html" title="インラインマークアップ、リスト、セクション"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="writing_tool.html" title="reST を記述する上での注意点"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, sphinx-users.jp.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3 で生成しました。
+    </div>
+  </body>
+</html>

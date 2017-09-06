@@ -11,19 +11,19 @@ Sphinxでドキュメントを作成するためには、まず「プロジェ�
 sphinx-quickstart
 -----------------
 
-Sphinx1.3から非対話モードオプション(-q)が追加され、必要最低限の設定だけを指定してプロジェクトが作成できます。
-必須のオプションは、する ``-p`` オプション、 ``-a`` オプション、vオプションの3つです。comment
-
+何もオプションを付けないと対話モードになり、 ``-q`` オプションを付けると非対話モードでプロジェクトが作成できます。
+ここでは非対話モードを紹介します。
 
 :プロジェクト名の指定: -p
 :ドキュメントの製作者(Author name(s))の指定: -a
 :プロジェクトのバージョンを指定: -v
+:プロジェクトのロケール(言語)を指定: -l
 
 sphinx-quickstart(非対話モード)の実行例:
 
 .. code-block:: console
 
-    $ sphinx-quickstart -q -p project_name -a pyconjp -v 1.0 project_dir
+    $ sphinx-quickstart -q -p project_name -a pyconjp -v 1.0 -l ja project_dir
     Creating file project_dir/conf.py.
     Creating file project_dir/index.rst.
     Creating file project_dir/Makefile.

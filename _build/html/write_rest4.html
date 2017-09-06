@@ -1,0 +1,287 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>リテラルブロック (コードブロック) その１ &#8212; handson 1 ドキュメント</title>
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="リテラルブロック (コードブロック) その２" href="write_rest5.html" />
+    <link rel="prev" title="表 (テーブル)" href="write_rest3.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="write_rest5.html" title="リテラルブロック (コードブロック) その２"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="write_rest3.html" title="表 (テーブル)"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">リテラルブロック (コードブロック) その１</a><ul>
+<li><a class="reference internal" href="#id2">リテラルブロック</a><ul>
+<li><a class="reference internal" href="#id3">シンタックスハイライト</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code-block">code-blockディレクティブ</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="write_rest3.html"
+                        title="前の章へ">表 (テーブル)</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="write_rest5.html"
+                        title="次の章へ">リテラルブロック (コードブロック) その２</a></p>
+  <div role="note" aria-label="source link">
+    <h3>このページ</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/write_rest4.rst.txt"
+            rel="nofollow">ソースコードを表示</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="検索" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>リテラルブロック (コードブロック) その１<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sphinxで <strong>リテラルブロック</strong> とはプログラムのソースコードやコマンドライン、他にエスケープ文字やSphinxで解釈されてしまうreST表記やディレクティブ等をそのまま表示させたい時に使う方法です。</p>
+<div class="section" id="id2">
+<h2>リテラルブロック<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">::</span> <span class="pre">(コロン×2)</span></code> の次に空行を空けてインデントをして記述します。</p>
+<p>記述例:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span></span><span class="se">::</span>
+
+<span class="s"> def fizzbuzz(a):</span>
+<span class="s">     if not(a%15):</span>
+<span class="s">         print &quot;fizzbuzz&quot;</span>
+<span class="s">     elif not(a%5):</span>
+<span class="s">         print &quot;buzz&quot;</span>
+<span class="s">     elif not(a%3):</span>
+<span class="s">         print &quot;fizz&quot;</span>
+<span class="s">     else:</span>
+<span class="s">         print a</span>
+
+<span class="s"> map(fizzbuzz,range(1,100))</span>
+</pre></div>
+</div>
+<p>このように表示されます。:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>def fizzbuzz(a):
+    if not(a%15):
+        print &quot;fizzbuzz&quot;
+    elif not(a%5):
+        print &quot;buzz&quot;
+    elif not(a%3):
+        print &quot;fizz&quot;
+    else:
+        print a
+
+map(fizzbuzz,range(1,100))
+</pre></div>
+</div>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">::</span> <span class="pre">(コロン×2)</span></code> の前に文字列を入れた場合は、文字列の後に <code class="docutils literal"><span class="pre">:</span> <span class="pre">(コロン)</span></code> が1つ表示されます。上記の例で使用している <code class="docutils literal"><span class="pre">記述例::</span></code> を見て下さい。</p>
+</li>
+</ul>
+<div class="section" id="id3">
+<h3>シンタックスハイライト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">::</span> <span class="pre">(コロン×2)</span></code> より前に <code class="docutils literal"><span class="pre">highlight</span></code> ディレクティブを入れる事によりシンタックスハイライトする事ができます。</p>
+<p>記述例:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">highlight</span><span class="p">::</span> python
+   <span class="nc">:linenothreshold:</span> <span class="nf">5</span>
+
+記述例<span class="se">::</span>
+
+<span class="s">  def fizzbuzz(a):</span>
+<span class="s">  　　if not(a%15):</span>
+<span class="s">  　　　　print &quot;fizzbuzz&quot;</span>
+<span class="s">  　　elif not(a%5):</span>
+<span class="s">  　　　　print &quot;buzz&quot;</span>
+<span class="s">  　　elif not(a%3):</span>
+<span class="s">  　　　　print &quot;fizz&quot;</span>
+<span class="s">  　　else:</span>
+<span class="s">  　　　　print a</span>
+
+<span class="s">  map(fizzbuzz,range(1,100))</span>
+</pre></div>
+</div>
+<p>このように表示されます。</p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">def</span> <span class="nf">fizzbuzz</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="ow">not</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">15</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;fizzbuzz&quot;</span>
+    <span class="k">elif</span> <span class="ow">not</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">5</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;buzz&quot;</span>
+    <span class="k">elif</span> <span class="ow">not</span><span class="p">(</span><span class="n">a</span><span class="o">%</span><span class="mi">3</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">&quot;fizz&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">a</span>
+
+<span class="nb">map</span><span class="p">(</span><span class="n">fizzbuzz</span><span class="p">,</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+<li><p class="first">1つのreSTファイルの頭に <code class="docutils literal"><span class="pre">..</span> <span class="pre">highlight::</span> <span class="pre">python</span></code> を入れておくと以降のリテラルブロックはPythonのシンタックスハイライトが適用されます。</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">linenothreshold</span></code> というオプションを付けると行番号が表示されます。 <code class="docutils literal"><span class="pre">:linenothreshold:</span> <span class="pre">5</span></code> の場合は5行以上ある場合に行番号が表示されます。</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">highlight</span></code> や <code class="docutils literal"><span class="pre">code-block</span></code> で使える言語の引数は <a class="reference internal" href="write_rest5.html"><span class="doc">こちら</span></a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="code-block">
+<h2>code-blockディレクティブ<a class="headerlink" href="#code-block" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul>
+<li><p class="first"><code class="docutils literal"><span class="pre">::</span> <span class="pre">(コロン×2)</span></code> と <code class="docutils literal"><span class="pre">highlight</span></code> ディレクティブの組み合わせで、リテラルブロック＋シンタックスハイライトを表示させてきましたが <code class="docutils literal"><span class="pre">code-block</span></code> ディレクティブのみで表示させる事も可能です。1つのreSTファイルの中に異なるシンタックスハイライトで表示させたい場合に使います。</p>
+<p>記述例:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>.. code-block:: awk
+   :linenos:
+
+   #!/usr/bin/gawk
+   BEGIN{i=0
+       while (i&lt;100) {
+                      i++
+                      fizzbuzz(i)
+                      }
+   }
+   function fizzbuzz(a){
+       if (!index(a / 15,&quot;.&quot;)) print &quot;FizzBuzz&quot;
+           else
+               if (!index(a / 3,&quot;.&quot;)) print &quot;Fizz&quot;
+                   else
+                       if (!index(a / 5,&quot;.&quot;)) print &quot;Buzz&quot;
+                           else
+                               print a
+   }
+</pre></div>
+</div>
+<p>このように表示されます。</p>
+<div class="highlight-awk"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">#!/usr/bin/gawk</span>
+<span class="nb">BEGIN</span><span class="p">{</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nx">i</span><span class="o">&lt;</span><span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+                   <span class="nx">i</span><span class="o">++</span>
+                   <span class="nx">fizzbuzz</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+                   <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">fizzbuzz</span><span class="p">(</span><span class="nx">a</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="kr">index</span><span class="p">(</span><span class="nx">a</span> <span class="o">/</span> <span class="mi">15</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">))</span> <span class="kr">print</span> <span class="s2">&quot;FizzBuzz&quot;</span>
+        <span class="k">else</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="kr">index</span><span class="p">(</span><span class="nx">a</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">))</span> <span class="kr">print</span> <span class="s2">&quot;Fizz&quot;</span>
+                <span class="k">else</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="kr">index</span><span class="p">(</span><span class="nx">a</span> <span class="o">/</span> <span class="mi">5</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">))</span> <span class="kr">print</span> <span class="s2">&quot;Buzz&quot;</span>
+                        <span class="k">else</span>
+                            <span class="kr">print</span> <span class="nx">a</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="write_rest5.html" title="リテラルブロック (コードブロック) その２"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="write_rest3.html" title="表 (テーブル)"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">handson 1 ドキュメント</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, sphinx-users.jp.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3 で生成しました。
+    </div>
+  </body>
+</html>
