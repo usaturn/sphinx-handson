@@ -21,7 +21,7 @@ reST の代わりに Markdown を使うことも可能です。ただし Sphinx 
 
 次に :numref:`markdown-sample` の内容をSphinxプロジェクトのディレクトリに ``sample.md`` というファイル名で保存します。
 
-.. literalinclude:: files/sample.md
+.. literalinclude:: ref/sample.md
    :caption: sample.md
    :name: markdown-sample
 
@@ -175,7 +175,7 @@ reStructuredTextは1つのドキュメントソースから様々な出力形式
 
 他にも、有志が作成したSphinx拡張を利用することで、sphinxcontrib-cacooやsphinxcontrib-visio等による外部からの図の埋め込み、sphinxcontrib-seqdiagの専用記法によるシーケンス図の描画(:numref:`seqdiag-usecase2`)、といった機能が使えるようになります。
 
-.. figure:: seqdiag_usecase.png
+.. figure:: img/seqdiag_usecase.png
    :name: seqdiag-usecase2
 
    ``sphinxcontrib-seqdiag`` の出力結果

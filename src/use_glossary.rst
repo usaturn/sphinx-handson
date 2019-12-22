@@ -24,3 +24,6 @@ glossaryを参照する例::
 
    :term:`Sphinx` と :term:`Word` について、それぞれのメリット・デメリットをまとめます。
 
+.. [#definition-lists]
+   - http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html#definition-lists
+   - http://docutils.sphinx-users.jp/docutils/docs/ref/rst/restructuredtext.html#definition-lists

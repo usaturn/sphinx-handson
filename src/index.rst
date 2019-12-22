@@ -21,4 +21,4 @@ Contents:
    use_extentions
    use_glossary
    use_markdown
-
+   glossary

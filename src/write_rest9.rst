@@ -9,11 +9,11 @@
 
   記述例::
 
-    :download:`ダウンロードできます <./files/build_and_browsing.zip>`
+    :download:`ダウンロードできます <./ref/build_and_browsing.zip>`
 
   このように表示されます。
 
-  :download:`ダウンロードできます <./files/build_and_browsing.zip>`
+  :download:`ダウンロードできます <./ref/build_and_browsing.zip>`
 
 
 画像を表示する ～figure ディレクティブ～

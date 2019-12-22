@@ -7,13 +7,13 @@
 
   記述例::
 
-    .. literalinclude:: ./files/yes_or_no.sh
+    .. literalinclude:: ./ref/yes_or_no.sh
        :language: bash
        :linenos:
 
   このように表示されます。
 
-  .. literalinclude:: ./files/yes_or_no.sh
+  .. literalinclude:: ./ref/yes_or_no.sh
      :language: bash
      :linenos:
 
