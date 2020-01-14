@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "rst"
+  ],
+  "rules": {
+    "preset-ja-technical-writing": true,
+    "@proofdict/proofdict": {
+        "dictURL": "https://github.com/usaturn/proof-dictionary/"
+    }
+  }
+}
