@@ -1,0 +1,52 @@
+{
+  "plugins": [
+    "rst"
+  ],
+  "filters": {
+    "whitelist": {
+      "allow": [
+        "/\\$\\$[\\s\\S]*?\\$\\$/m"
+        ]
+    }
+  },
+  "rules": {
+    "preset-ja-technical-writing": true,
+    "max-ten": {
+        "max" : 3
+    },
+    "@textlint-ja/no-insert-dropping-sa": true,
+    "first-sentence-length": true,
+    "ja-hiragana-fukushi": true,
+    "ja-hiragana-hojodoushi": true,
+    "ja-hiragana-keishikimeishi": true,
+    "ja-no-abusage": true,
+    "ja-no-mixed-period": {
+       "periodMark": "。",
+       "allowPeriodMarks": ['す','だ'],
+       "allowEmojiAtEnd": true,
+       "forceAppendPeriod": false
+    },
+    "ja-no-redundant-expression": true,
+    "ja-no-weak-phrase": true,
+    "ja-unnatural-alphabet": true,
+    "max-appearence-count-of-words": true,
+    "max-kanji-continuous-len": true,
+    "max-kanji-continuous-len": {
+        max: 5,
+        allow: ["製作者指定","拡張子指定"]
+    },
+    "no-double-negative-ja": true,
+    "no-doubled-conjunction": true,
+    "no-doubled-conjunctive-particle-ga": true,
+    "no-doubled-joshi": true,
+    "no-dropping-the-ra": true,
+    "no-hankaku-kana": true,
+    "no-mix-dearu-desumasu": true,
+    "no-mixed-zenkaku-and-hankaku-alphabet": true,
+    "prefer-tari-tari": true,
+    "sentence-length": true,
+    "@proofdict/proofdict": {
+        "dictURL": "https://github.com/usaturn/proof-dictionary/"
+    }
+  }
+}
