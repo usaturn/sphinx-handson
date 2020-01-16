@@ -28,7 +28,7 @@ jobs:
         #flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Install npm package
       run: |
-        npm i yarn && yarn global add
+        npm i -g && yarn
     - name: Check text
       run: |
         textlint docs
