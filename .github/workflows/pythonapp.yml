@@ -31,7 +31,7 @@ jobs:
         npm i yarn && yarn
     - name: Check text
       run: |
-        textlint docs
+        yarn test
     - name: Build HTML
       run: |
         sphinx-build -W src build
