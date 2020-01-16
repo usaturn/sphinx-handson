@@ -29,6 +29,7 @@ jobs:
     - name: Install npm package
       run: |
         npm i yarn && yarn
+        export PATH=$PATH:./node_modules/.bin:$PATH
     - name: Check text
       run: |
         textlint docs
