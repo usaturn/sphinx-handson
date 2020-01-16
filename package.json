@@ -18,8 +18,8 @@
   "author": "usaturn <kane@berserga.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "run-p -l lint:*",
-    "lint:ja": "textlint ja"
+    "test": "run-p -l lint:*",
+    "lint:ja": "textlint src"
   },
   "dependencies": {
     "@proofdict/textlint-rule-proofdict": "^3.0.0",
